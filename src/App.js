@@ -1,3 +1,9 @@
+/**
+ * Create a new component that is responsible for displaying expenses
+ * Add multiple ExpenseItem components in that component
+ * Keep the expenses data in the App component and pass that data into the newly created component
+ */
+import ExpenseContainer from "./components/ExpenseContainer";
 import ExpenseItem from "./components/ExpenseItem";
 function App() {
   const expenses = [
@@ -24,6 +30,7 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
+      <ExpenseContainer data={expenses} />
     </div>
   );
 }
