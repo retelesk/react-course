@@ -1,7 +1,7 @@
 import ExpenseItem from "./ExpenseItem";
-import Card from "./Card";
+import Card from "../UI/Card";
 import "./ExpenseContainer.css";
-function ExpenseContainer(props) {
+const ExpenseContainer = function (props) {
   const propArr = Object.values(props).flat();
   return (
     <Card className="expenses">
@@ -27,6 +27,6 @@ function ExpenseContainer(props) {
       />
     </Card>
   );
-}
+};
 
 export default ExpenseContainer;

@@ -3,8 +3,8 @@
  * Add multiple ExpenseItem components in that component
  * Keep the expenses data in the App component and pass that data into the newly created component
  */
-import ExpenseContainer from "./components/ExpenseContainer";
-import ExpenseItem from "./components/ExpenseItem";
+import ExpenseContainer from "./components/Expenses/ExpenseContainer";
+import ExpenseItem from "./components/Expenses/ExpenseItem";
 function App() {
   const expenses = [
     {
