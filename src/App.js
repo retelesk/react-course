@@ -4,7 +4,6 @@
  * Keep the expenses data in the App component and pass that data into the newly created component
  */
 import ExpenseContainer from "./components/Expenses/ExpenseContainer";
-import ExpenseItem from "./components/Expenses/ExpenseItem";
 function App() {
   const expenses = [
     {
@@ -33,6 +32,6 @@ function App() {
       <ExpenseContainer data={expenses} />
     </div>
   );
-}
+};
 
 export default App;
