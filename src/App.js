@@ -4,6 +4,8 @@
  * Keep the expenses data in the App component and pass that data into the newly created component
  */
 import ExpenseContainer from "./components/Expenses/ExpenseContainer";
+import NewExpense from "./components/NewExpense/NewExpense";
+
 function App() {
   const expenses = [
     {
@@ -26,12 +28,16 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  };
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <ExpenseContainer data={expenses} />
     </div>
   );
-};
+}
 
 export default App;
