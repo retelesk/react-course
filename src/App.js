@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
+
 import AddUser from "./components/Users/AddUser";
 import UsersList from "./components/Users/UsersList";
 
 function App() {
   const [usersList, setUsersList] = useState([]);
-  const addUserHandler = function (uName, uAge) {
+
+  const addUserHandler = (uName, uAge) => {
     setUsersList((prevUsersList) => {
       return [
         ...prevUsersList,
@@ -12,11 +14,12 @@ function App() {
       ];
     });
   };
+
   return (
-    <div>
+    <Fragment>
       <AddUser onAddUser={addUserHandler} />
       <UsersList users={usersList} />
-    </div>
+    </Fragment>
   );
 }
 

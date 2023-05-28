@@ -1,8 +1,10 @@
-import Card from "./Card";
-import Button from "./Button";
-import classes from "./ErrorModal.module.css";
+import React from 'react';
 
-const ErrorModal = function (props) {
+import Card from './Card';
+import Button from './Button';
+import classes from './ErrorModal.module.css';
+
+const ErrorModal = (props) => {
   return (
     <div>
       <div className={classes.backdrop} onClick={props.onConfirm} />
@@ -20,4 +22,5 @@ const ErrorModal = function (props) {
     </div>
   );
 };
+
 export default ErrorModal;
